@@ -7,3 +7,20 @@
 //
 
 #include "Dice.hpp"
+
+ostream& Dice::print( ostream& out )
+{
+    for( int k=0; k<nDice; ++k) {
+        out << k+1 <<"-" << diceArray[k] <<"  ";
+    }
+    return out;
+}
+
+const int* Dice::roll(){
+    for (int k=0; k<nDice; k++) {
+        diceArray[k]=(rand() % 6) + 1;
+        cout<<"\n" <<diceArray[k];
+    }
+    return diceArray;
+}
+

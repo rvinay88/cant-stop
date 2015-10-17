@@ -25,4 +25,11 @@ public:
     ~Dice() {
         delete[] diceArray;
     }
+    ostream& print( ostream& sout );
+    const int* roll();
+    
 };
+
+inline ostream& operator<< (ostream& out, Dice& dp) {
+    return out;
+}
