@@ -7,6 +7,7 @@
 //
 
 #include "tools.hpp"
+#include "Dice.hpp"
 
 int main() {
     banner();
