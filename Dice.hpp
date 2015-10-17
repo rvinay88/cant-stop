@@ -8,15 +8,21 @@
 
 #pragma once
 #include "tools.hpp"
+#include <ctime>
 
 class Dice {
 private:
     int nDice;
     int *diceArray;
 public:
-    Dice( int n = 1 ) {
+    Dice(int n = 1) {
         nDice = n;
         diceArray = new int [ nDice ];
+        srand ( (unsigned)time( NULL ) );
+        cout << "Construction complete \n";
     }
     
+    ~Dice() {
+        delete[] diceArray;
+    }
 };
