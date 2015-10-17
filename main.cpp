@@ -10,12 +10,22 @@
 #include "Dice.hpp"
 
 void unitDice() {
-    cout << "Testing Dice \n---------\n";
+    // Create dice with 6 faces
+    cout << "Testing Dice: \n";
     Dice testDice(6);
-    const int* value = testDice.roll();
-    cout << value;
-    cout << "\n Printing dice \n---------\n";
+    testDice.roll();
+    cout << "\n\nPrinting dice: \n";
     testDice.print(cout);
+    cout << "\n---------\n";
+    
+    // Roll dice again to test values
+    testDice.roll();
+    testDice.print(cout);
+
+    // Create a dice with 2 faces
+    Dice testDice2(2);
+    testDice2.roll();
+    testDice2.print(cout);
 }
 
 int main() {

@@ -19,7 +19,7 @@ public:
         nDice = n;
         diceArray = new int [ nDice ];
         srand ( (unsigned)time( NULL ) );
-        cout << "Construction complete \n";
+        cout << "\nConstruction complete \n";
     }
     
     ~Dice() {
