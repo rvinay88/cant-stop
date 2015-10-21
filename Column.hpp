@@ -17,7 +17,7 @@ private:
     static const int colHeights[];
 public:
     Column(int nCol) {
-        
+        cout << colHeights[nCol];
     }
     ~Column() {}
     ostream& print( ostream& sout );

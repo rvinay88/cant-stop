@@ -8,6 +8,7 @@
 
 #include "tools.hpp"
 #include "Dice.hpp"
+#include "Column.hpp"
 
 void unitDice() {
     // Create dice with 6 faces
@@ -28,10 +29,38 @@ void unitDice() {
     testDice2.print(cout);
 }
 
+void unitColumn() {
+    cout << "\n";
+    Column newC2(2);
+    cout << "\n";
+    Column newC3(3);
+    cout << "\n";
+    Column newC4(4);
+    cout << "\n";
+    Column newC5(5);
+    cout << "\n";
+    Column newC6(6);
+    cout << "\n";
+    Column newC7(7);
+    cout << "\n";
+    Column newC8(8);
+    cout << "\n";
+    Column newC9(9);
+    cout << "\n";
+    Column newC10(10);
+    cout << "\n";
+    Column newC11(11);
+    cout << "\n";
+    Column newC12(12);
+    cout << "\n";
+    
+}
+
 int main() {
     banner();
     puts( "C++ programs" );
     unitDice();
+    unitColumn();
     bye();
     return 0;
 }
