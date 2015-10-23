@@ -58,6 +58,17 @@ void unitColumn() {
 }
 
 void unitPlayer() {
+    Player p("vinay", ORANGE);
+    cout << "\nPlayer declared: \n";
+    cout << "Score: " << p.score() << "\n" ;
+    cout << "Color: " << p.color() << "\n" ;
+    
+    Player p2("vinay", YELLOW);
+    cout << "\nPlayer declared: \n";
+    cout << "Score: " << p2.score() << "\n" ;
+    cout << "Color: " << p2.color() << "\n" ;
+    
+    
 }
 
 int main() {

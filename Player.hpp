@@ -10,18 +10,17 @@
 
 class Player {
 private:
-    char*  playerName;
+    char* playerName;
     ColorENum playerColor;
     int playerScore; // num of columns this player has captured
-    int scoreboard[3]; // array of captured columns
+    int scoreboard[3] = {0,0,0}; // array of captured columns
 public:
     Player(char* name, ColorENum color) {
         playerName = name;
         playerColor = color;
+        playerScore = 0;        // Initially score is 0
     }
-    ~Player() {
-        delete[] playerName;
-    }
+    ~Player() {}
     ColorENum color() {
         return playerColor;
     }

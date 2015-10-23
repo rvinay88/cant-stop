@@ -11,5 +11,4 @@
     extern const char* colorNames[5];
     enum colStatus { AVAILABLE, PENDING, CAPTURED};
     extern const char* statusNames[3];
-
 #endif
