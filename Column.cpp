@@ -49,17 +49,33 @@ bool Column::startTower(Player *player) {
     else {
         return false;
     }
-    // place square in first
-    return false;
 }
+
 bool Column::move() {
-    // see if player has a TILE in this column
-    // see if column is not captured
-    // see if the next square exists
-    // remove TILE from current square
-    // put TOWER in next square
-    // false if move is illegal
-    // true if you made the move
+    int index;
+
+    // Find out where the tower is
+    for(int k=0;k<5;++k) {
+        if(markerArray[k]==0) {
+            index = k;
+        }
+    }
+    
+    // If last but one, set to pending before move
+    if(index == colLength-2) {
+        colState = 1; // Set to pending
+    }
+    
+    // Check if move is legal
+    if(index == colLength-1) {
+        cout << "\nCannot perform move\n";
+        return false; // Cannot move beyond the last
+    }
+
+    // Perform the move
+    markerArray[index] = 7;   // Reset tower to nothing
+    markerArray[index+1] = 0; // Place Tower in the next column
+
     return true;
 }
 void Column::stop() {

@@ -43,21 +43,37 @@ void unitColumn() {
     Column newC2(2);
     cout << newC2.state();
     newC2.print(cout);
+
     // Declare player
     Player p2("someoneElse", YELLOW);
     cout << "\nPlayer declared: \n";
     cout << "Score: " << p2.score() << "\n" ;
     cout << "Color: " << p2.color() << "\n" ;
+
     // Assign player pointer
     Player *p3 = &p2;
+
     // Start tower using pointer
     newC2.startTower(p3);
     newC2.print(cout);
-    cout << "\n";
+
+    //Move the marker - 1
+    newC2.move();
+    newC2.print(cout);
+    
+    //Move the marker - 2
+    newC2.move();
+    newC2.print(cout);
+    
+    //Move the marker - 3
+    newC2.move();
+    newC2.print(cout);
+    
+    
     Column newC3(3);
-    cout << "\n";
+    newC3.print(cout);
     Column newC4(4);
-    cout << "\n";
+    newC4.print(cout);
     Column newC5(5);
     cout << "\n";
     Column newC6(6);
