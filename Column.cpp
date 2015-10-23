@@ -14,16 +14,14 @@ ostream& Column::print( ostream& out )
 {
     out << "\nPrinting column: \n";
     out << colNumber;
-    out << " " << colState;
+    out << " " << state();
+    out << "  ";
     for (int k=0; k<5;++k) {
         if(markerArray[k] == 0) {
             out << "-";
         }
         else {
-            // if nonzero
-            // find value
-            // fetch corresponding name
-            // print first letter
+            out << colorNames[markerArray[k]][0]; // print first letter of correponding value
         }
     }
     return out;
