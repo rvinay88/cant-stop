@@ -7,23 +7,25 @@
 //
 #include "tools.hpp"
 #include "enums.hpp"
+#include "player.hpp"
 
 class Column {
 private:
-    int  markerArray[5];    // [0,1,0,4,0] [TOYGB]
-    int  colState;       //  [0,1,2] corresponds to [A,P,C] corresponds to enum
-    int  colNumber;
-    int  colLength;
-    int  *player;           // will change to Player *player;
+    int     markerArray[5] = {0,0,0,0,0};    // [0,1,0,4,0] [TOYGB]
+    int     colState = 0;         //  0,1 or 2] corresponds to [A,P,C] corresponds to enum
+    int     colNumber;
+    int     colLength;
+    Player  *player;
     static const int colHeights[];
 public:
     Column(int nCol) {
-        colLength = colHeights[nCol];
-//        colState = state['A'];
+        colNumber = nCol;
+        colLength = colHeights[colNumber];
+        colState = 0;
     }
     ~Column() {}
     ostream& print( ostream& sout );
-    int state();
+    const char* state();
     bool startTower(int* player); // should be Player *player
     bool move();
     void stop();

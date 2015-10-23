@@ -20,8 +20,8 @@ ostream& Column::print( ostream& out )
     return out;
 }
 
-int Column::state() {
-    return colState;
+const char* Column::state() {
+    return statusNames[colState];
 }
 
 bool Column::startTower(int *player) { // should take in Player* player
