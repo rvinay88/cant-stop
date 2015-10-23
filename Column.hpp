@@ -9,20 +9,21 @@
 
 class Column {
 private:
-    int markerArray[5]; // check if it's really int
-    char state[5]; // AVAIL, PENDN, CPTRD
-    int colNumber;
-    int colLength;
-    int *player; // will change to Player *player;
+    int  markerArray[5];    // [0,1,0,4,0] [TOYGB]
+    int  colState;       //  [0,1,2] corresponds to [A,P,C] corresponds to enum
+    int  colNumber;
+    int  colLength;
+    int  *player;           // will change to Player *player;
     static const int colHeights[];
 public:
     Column(int nCol) {
-        cout << colHeights[nCol];
+        colLength = colHeights[nCol];
+//        colState = state['A'];
     }
     ~Column() {}
     ostream& print( ostream& sout );
-    char getState();
-    bool startTower ();
+    int state();
+    bool startTower(int* player); // should be Player *player
     bool move();
     void stop();
     void bust();
