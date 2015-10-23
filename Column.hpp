@@ -11,12 +11,13 @@
 
 class Column {
 private:
-    int     markerArray[5] = {7,7,7,7,7};    // [0,1,0,4,0] => [WOYGB]; Initialize with any number > 4
+    int     markerArray[5] = {20,20,20,20,20};    // [0,13,0,4,0] => [WOYGB]; Initialize with any number > 15
     int     colState = 0;         //  0,1 or 2] corresponds to [A,P,C] corresponds to enum
     int     colNumber;
     int     colLength;
     Player  *player;
     static const int colHeights[];
+    char* printCol[];
 public:
     Column(int nCol) {
         colNumber = nCol;
