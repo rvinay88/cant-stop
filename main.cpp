@@ -52,6 +52,7 @@ void unitColumn() {
     Player *p3 = &p2;
     // Start tower using pointer
     newC2.startTower(p3);
+    newC2.print(cout);
     cout << "\n";
     Column newC3(3);
     cout << "\n";

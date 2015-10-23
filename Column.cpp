@@ -7,6 +7,7 @@
 //
 
 #include "Column.hpp"
+#include <string>
 
 const int Column::colHeights[] = { 0, 0, 3, 5, 7, 9, 11, 13, 11, 9, 7, 5, 3 };
 
@@ -17,7 +18,7 @@ ostream& Column::print( ostream& out )
     out << " " << state();
     out << "  ";
     for (int k=0; k<5;++k) {
-        if(markerArray[k] == 0) {
+        if(markerArray[k] == 7) {
             out << "-";
         }
         else {
@@ -33,22 +34,16 @@ const char* Column::state() {
 
 bool Column::startTower(Player *player) {
     if(state() == "AVAILABLE") {
-        cout << "Col is available, so proceeding";
-        cout << colorNames[player->color()];
-        // Marker array is [7,7,7,7,7]
-        //find player's color
-        // see if color is there in existing marker array
-        // if yes put tower there
-        // else put tower in 0
+        // Col is available, so proceeding
+        int thisColor = player->color();
+        int index = 0;
+        
         for(int k=0;k<5;++k) {
-        //    if(markerArray[k] == .)
+            if(markerArray[k] == thisColor) {
+                index = k;
+            }
         }
-        if(true) {
-            
-        }
-        else {
-            markerArray[0] = 0;
-        }
+        markerArray[index] = 0; // Place Tower in appropriate position
         return true;
     }
     else {
