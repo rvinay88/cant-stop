@@ -9,6 +9,7 @@
 #include "tools.hpp"
 #include "Dice.hpp"
 #include "Column.hpp"
+#include "Player.hpp"
 
 void unitDice() {
     // Create dice with 6 faces
@@ -56,11 +57,15 @@ void unitColumn() {
     
 }
 
+void unitPlayer() {
+}
+
 int main() {
     banner();
     puts( "C++ programs" );
     unitDice();
     unitColumn();
+    unitPlayer();
     bye();
     return 0;
 }

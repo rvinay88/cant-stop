@@ -6,6 +6,7 @@
 //  Copyright © 2015 Vinay  Raghu. All rights reserved.
 //
 #include "tools.hpp"
+#include "enums.hpp"
 
 class Column {
 private:

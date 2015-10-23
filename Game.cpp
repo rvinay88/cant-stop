@@ -7,3 +7,6 @@
 //
 
 #include "Game.hpp"
+
+extern const char* colorNames[5] = { "WHITE", "ORANGE", "YELLOW", "GREEN", "BLUE" };
+extern const char* statusNames[3] = { "AVAILABLE", "PENDING", "CAPTURED" };
