@@ -33,6 +33,8 @@ void unitDice() {
 void unitColumn() {
     cout << "\n";
     Column newC2(2);
+    cout << newC2.state();
+    newC2.print(cout);
     cout << "\n";
     Column newC3(3);
     cout << "\n";

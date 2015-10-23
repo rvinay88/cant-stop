@@ -12,10 +12,19 @@ const int Column::colHeights[] = { 0, 0, 3, 5, 7, 9, 11, 13, 11, 9, 7, 5, 3 };
 
 ostream& Column::print( ostream& out )
 {
+    out << "\nPrinting column: \n";
     out << colNumber;
     out << " " << colState;
-    for (int k=0; k<colLength;++k) {
-        // out << print T--G-
+    for (int k=0; k<5;++k) {
+        if(markerArray[k] == 0) {
+            out << "-";
+        }
+        else {
+            // if nonzero
+            // find value
+            // fetch corresponding name
+            // print first letter
+        }
     }
     return out;
 }
