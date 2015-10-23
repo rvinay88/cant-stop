@@ -11,7 +11,7 @@
 
 class Column {
 private:
-    int     markerArray[5] = {0,0,0,0,0};    // [0,1,0,4,0] [TOYGB]
+    int     markerArray[5] = {7,7,7,7,7};    // [0,1,0,4,0] => [WOYGB]; Initialize with any number > 4
     int     colState = 0;         //  0,1 or 2] corresponds to [A,P,C] corresponds to enum
     int     colNumber;
     int     colLength;
@@ -26,7 +26,7 @@ public:
     ~Column() {}
     ostream& print( ostream& sout );
     const char* state();
-    bool startTower(int* player); // should be Player *player
+    bool startTower(Player* player); // should be Player *player
     bool move();
     void stop();
     void bust();

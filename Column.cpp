@@ -21,7 +21,7 @@ ostream& Column::print( ostream& out )
             out << "-";
         }
         else {
-            out << colorNames[markerArray[k]][0]; // print first letter of correponding value
+            out << colorNames[markerArray[k]][0]; // TODO: check if O, W etc is being printed
         }
     }
     return out;
@@ -31,12 +31,30 @@ const char* Column::state() {
     return statusNames[colState];
 }
 
-bool Column::startTower(int *player) { // should take in Player* player
-    // get state
-    // if available
+bool Column::startTower(Player *player) {
+    if(state() == "AVAILABLE") {
+        cout << "Col is available, so proceeding";
+        cout << colorNames[player->color()];
+        // Marker array is [7,7,7,7,7]
+        //find player's color
+        // see if color is there in existing marker array
+        // if yes put tower there
+        // else put tower in 0
+        for(int k=0;k<5;++k) {
+        //    if(markerArray[k] == .)
+        }
+        if(true) {
+            
+        }
+        else {
+            markerArray[0] = 0;
+        }
+        return true;
+    }
+    else {
+        return false;
+    }
     // place square in first
-    // return true if legal
-    // else false
     return false;
 }
 bool Column::move() {

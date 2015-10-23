@@ -30,11 +30,28 @@ void unitDice() {
     testDice2.print(cout);
 }
 
+void unitPlayer() {
+    Player p("vinay", ORANGE);
+    cout << "\nPlayer declared: \n";
+    cout << "Score: " << p.score() << "\n" ;
+    cout << "Color: " << p.color() << "\n" ;
+}
+
+
 void unitColumn() {
     cout << "\n";
     Column newC2(2);
     cout << newC2.state();
     newC2.print(cout);
+    // Declare player
+    Player p2("someoneElse", YELLOW);
+    cout << "\nPlayer declared: \n";
+    cout << "Score: " << p2.score() << "\n" ;
+    cout << "Color: " << p2.color() << "\n" ;
+    // Assign player pointer
+    Player *p3 = &p2;
+    // Start tower using pointer
+    newC2.startTower(p3);
     cout << "\n";
     Column newC3(3);
     cout << "\n";
@@ -56,20 +73,6 @@ void unitColumn() {
     cout << "\n";
     Column newC12(12);
     cout << "\n";
-    
-}
-
-void unitPlayer() {
-    Player p("vinay", ORANGE);
-    cout << "\nPlayer declared: \n";
-    cout << "Score: " << p.score() << "\n" ;
-    cout << "Color: " << p.color() << "\n" ;
-    
-    Player p2("vinay", YELLOW);
-    cout << "\nPlayer declared: \n";
-    cout << "Score: " << p2.score() << "\n" ;
-    cout << "Color: " << p2.color() << "\n" ;
-    
     
 }
 
