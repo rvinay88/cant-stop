@@ -16,7 +16,7 @@ ostream& Column::print( ostream& out )
     for(int k=0;k<colLength;++k) {
         for(int z=0; z<5; z++) {
             if(markerArray[z] == k) {
-                out<< "C";
+                out<< colorNames[z][0];
                 break;
             }// 51787073
         }
