@@ -16,18 +16,26 @@ ostream& Player::print( ostream& out )
 }
 
 bool Player::wonColumn(int number) {
+    int wins = 0;
     // see all values in scoreboard
+    for (int i=0; i<3; i++) {
+        if(scoreboard[i] !=0) {
+            wins++;
+        }
+    }
     // if 2 values already exist
-    // then this is the third value and player wins
-    // index = first instance of zero array
-    int index = 2; // temp
-    scoreboard[index] = number;
-    if (index == 2) {
-        return true;
+    switch(wins) {
+        case 0: // No wins so far
+            scoreboard[0] = number;
+            return false;
+        case 1: // 1 win so far
+            scoreboard[1] = number;
+            return false;
+        case 2: // 2 wins already this is the third win
+            scoreboard[2] = number;
+            return true;
     }
-    else {
-        return false;
-    }
+    return true; // this line will never execute. it's here to satisfy the compiler
 }
 
 int Player::score() {

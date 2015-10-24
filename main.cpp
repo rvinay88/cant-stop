@@ -120,8 +120,10 @@ void unitStop() {
 
     cout << "\nPrinting C15 now\n";
     newC15.print(cout);
-    
-    
+    cout << "\n\n Calling won column on 3 for player 18 \n";
+    newP18.wonColumn(3);
+    newC15.wonColumn();
+    newC15.print(cout);
     cout << "\n----------Testing stop()-------\n";
     
 }

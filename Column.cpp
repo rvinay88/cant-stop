@@ -77,3 +77,7 @@ void Column::bust() {
     markerArray[0] = 20; // White tower is nowhere in the column
     colState = 0; // set column to available 
 }
+
+void Column::wonColumn() {
+    colState = 2;
+}

@@ -31,6 +31,7 @@ public:
     bool move();
     void stop();
     void bust();
+    void wonColumn();
 };
 
 inline ostream& operator<< (ostream& out, Column& c) {
