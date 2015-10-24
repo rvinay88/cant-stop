@@ -26,6 +26,9 @@ public:
     ColorENum color() {
         return playerColor;
     }
+    char* name() {
+        return playerName;
+    }
     bool wonColumn(int number);
     int score();
 };

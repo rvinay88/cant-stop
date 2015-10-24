@@ -81,11 +81,44 @@ void unitMove() {
     // It should say pending when player is in last and last but one column
     
     for(int i=0; i<9; ++i) {
-        cout<< i+1 << "th Move Tower: \n";
         newC13.move();
         newC13.print(cout);
         cout << "\n";
     }
+}
+
+void unitStop() {
+    
+    cout << "\n----------Testing stop()-------\n";
+    
+    Column newC15(3);
+    
+    Player newP15("Stan", GREEN);
+    cout <<"\n Name: " << newP15.name() << "\n";
+    Player *newP16 = &newP15;
+    cout << colorNames[newP16->color()];
+    cout << "\n Start Tower:";
+    newC15.startTower(newP16);
+    newC15.print(cout);
+    cout << " \n";
+    
+    // Move this player for 9 times
+    // It should reflect in the output that the tower is moving
+    // It should say pending when player is in last and last but one column
+    
+    for(int i=0; i<3; ++i) {
+        newC15.move();
+        newC15.print(cout);
+        cout << "\n";
+    }
+    cout << "Calling stop";
+    newC15.stop();
+    cout << "\nPrinting C15 now\n";
+    newC15.print(cout);
+    
+    
+    cout << "\n----------Testing stop()-------\n";
+    
 }
 
 int main() {
@@ -95,6 +128,7 @@ int main() {
     unitColumn();
     unitMove();
     unitPlayer();
+    unitStop();
     bye();
     return 0;
 }
