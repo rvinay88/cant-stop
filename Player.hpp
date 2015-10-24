@@ -5,7 +5,7 @@
 //  Created by Vinay  Raghu on 10/23/15.
 //  Copyright © 2015 Vinay  Raghu. All rights reserved.
 //
-
+#include "tools.hpp"
 #include "enums.hpp"
 #ifndef varPlayer
 #define varPlayer
@@ -31,6 +31,7 @@ public:
     }
     bool wonColumn(int number);
     int score();
+    ostream& print( ostream& sout );
 };
 
 #endif

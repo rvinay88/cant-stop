@@ -8,6 +8,13 @@
 
 #include "Player.hpp"
 
+ostream& Player::print( ostream& out )
+{
+    out << playerName;
+    out << playerColor;
+    return out;
+}
+
 bool Player::wonColumn(int number) {
     // see all values in scoreboard
     // if 2 values already exist

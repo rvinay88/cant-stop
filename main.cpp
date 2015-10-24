@@ -96,9 +96,12 @@ void unitStop() {
     Player newP15("Stan", GREEN);
     cout <<"\n Name: " << newP15.name() << "\n";
     Player *newP16 = &newP15;
-    cout << colorNames[newP16->color()];
     cout << "\n Start Tower:";
-    newC15.startTower(newP16);
+    
+    Player newP18("art", BLUE);
+    Player *newP19 = &newP18;
+    
+    newC15.startTower(newP19);
     newC15.print(cout);
     cout << " \n";
     
@@ -113,6 +116,8 @@ void unitStop() {
     }
     cout << "Calling stop";
     newC15.stop();
+
+
     cout << "\nPrinting C15 now\n";
     newC15.print(cout);
     

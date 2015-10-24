@@ -64,14 +64,16 @@ bool Column::move() {
 }
 
 void Column::stop() {
+    cout << "\n\nInside stop";
     int index = markerArray[0]; // Find out where the tower is
-    cout << "The player color is" << player->color();
-    // call Player::Color()
+    // cout << player->color(); // there is some issue here
     // replace tower with appropriate tile
-    // set captured
-    // call Player::wonColumn() if captured
+    if(index == colLength-1) {
+        colState = 2;
+        player->wonColumn(colNumber);
+    }
 }
 void Column::bust() {
-    // Remove tower from column
-    // Reset state to available
+    markerArray[0] = 20; // White tower is nowhere in the column
+    colState = 0; // set column to available 
 }
