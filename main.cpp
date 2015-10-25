@@ -25,9 +25,9 @@ void unitDice() {
     testDice.print(cout);
 
     // Create a dice with 2 faces
-    Dice testDice2(2);
-    testDice2.roll();
-    testDice2.print(cout);
+//    Dice testDice2(2);
+//    testDice2.roll();
+//    testDice2.print(cout);
 }
 
 void unitPlayer() {
