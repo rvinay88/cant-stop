@@ -66,6 +66,9 @@ bool Column::move() {
 void Column::stop() {
     cout << "\n\nInside stop";
     int index = markerArray[0]; // Find out where the tower is
+    // cout << "\nColor: " << player->color() << "\n";
+    cout << "Color \n";
+    player->color();
     // cout << player->color(); // there is some issue here
     // replace tower with appropriate tile
     if(index == colLength-1) {

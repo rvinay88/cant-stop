@@ -31,10 +31,10 @@ void unitDice() {
 }
 
 void unitPlayer() {
-    Player p("vinay", ORANGE);
-    cout << "\nPlayer declared: \n";
-    cout << "Score: " << p.score() << "\n" ;
-    cout << "Color: " << p.color() << "\n" ;
+//    Player p("vinay", ORANGE);
+//    cout << "\nPlayer declared: \n";
+//    cout << "Score: " << p.score() << "\n" ;
+//    cout << "Color: " << p.color() << "\n" ;
 }
 
 
