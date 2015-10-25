@@ -13,7 +13,7 @@ const int Column::colHeights[] = { 0, 0, 3, 5, 7, 9, 11, 13, 11, 9, 7, 5, 3 };
 
 ostream& Column::print( ostream& out )
 {
-    cout << colNumber << " ";
+    cout << "\n" << colNumber << " ";
     cout << state() << "  ";
     for(int k=0;k<colLength;++k) {
         for(int z=0; z<5; z++) {
@@ -22,7 +22,7 @@ ostream& Column::print( ostream& out )
                 break;
             }// 51787073
         }
-        if (k != colLength-1) {
+        if (k != colLength) {
             out << "-";
         }
     }
@@ -66,10 +66,13 @@ bool Column::move() {
 void Column::stop() {
     cout << "\n\nInside stop";
     int index = markerArray[0]; // Find out where the tower is
-    // cout << "\nColor: " << player->color() << "\n";
-    cout << "Color \n" << player->color();
+    int c = player->color();
+    cout << "\nColor \n" << player->color();
     // cout << player->color(); // there is some issue here
     // replace tower with appropriate tile
+    markerArray[0] = 20; // Remove tower
+    markerArray[c] = index; // Put the tile in that position
+    cout << "\nSuccess here\n";
     if(index == colLength-1) {
         colState = 2;
         player->wonColumn(colNumber);

@@ -21,7 +21,7 @@ private:
 public:
     Board() {
         for(int k=0; k<13; ++k) {
-            if(k==0) {
+            if(k==0 || k==1) {
                 backBone[k] = NULL;
             }
             else {
@@ -29,6 +29,7 @@ public:
             }
         }
     }
+    ostream& print( ostream& sout );
 };
 
 #endif /* Board_hpp */

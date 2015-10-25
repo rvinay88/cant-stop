@@ -10,6 +10,7 @@
 #include "Dice.hpp"
 #include "Column.hpp"
 #include "Player.hpp"
+#include "Board.hpp"
 
 void unitDice() {
     // Create dice with 6 faces
@@ -128,6 +129,13 @@ void unitStop() {
     
 }
 
+void unitBoard() {
+    cout << "\n------Testing Board-----";
+    Board b;
+    cout << "\n------Printing Board-----";
+    b.print(cout);
+}
+
 int main() {
     banner();
     puts( "C++ programs" );
@@ -136,6 +144,7 @@ int main() {
     unitMove();
     unitPlayer();
     unitStop();
+    unitBoard();
     bye();
     return 0;
 }

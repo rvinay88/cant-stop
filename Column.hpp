@@ -5,6 +5,9 @@
 //  Created by Vinay  Raghu on 10/17/15.
 //  Copyright © 2015 Vinay  Raghu. All rights reserved.
 //
+#ifndef Column_hpp
+#define Column_hpp
+
 #include "tools.hpp"
 #include "enums.hpp"
 #include "player.hpp"
@@ -37,3 +40,5 @@ public:
 inline ostream& operator<< (ostream& out, Column& c) {
     return out;
 }
+
+#endif
