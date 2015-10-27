@@ -17,6 +17,7 @@ private:
     int counter;     // number of players in the list
     Cell *head;      // Head pointer
     Player *current; // Point to the current player
+    Cell *list[];    // An array of pointers to cells
 public:
     CList() {
         counter = 0;

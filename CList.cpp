@@ -9,12 +9,26 @@
 #include "CList.hpp"
 
 void CList::remove() {
-//    current
-    delete[] current;       // remove current player
-    // remove corresponding cell
-    // set current pointer to the next CELL if available
-    // if head is being removed
-    // head should be next
+    Cell *cellToRemove = head;
+    Cell* prev = NULL;
+    int i=0;
+    if(!(head->cellPlayer == current)) {
+        do {
+            prev = cellToRemove;
+            cellToRemove = cellToRemove->next;
+        }
+        while(cellToRemove->cellPlayer != current); // Keep moving down the list until we find the cell that holds the current player
+        prev->next = cellToRemove->next; // reset the links
+        delete cellToRemove->cellPlayer;
+        delete[] cellToRemove;
+    }
+    else {
+        // handle head is current possibility
+        head = NULL;
+        head->next = NULL;
+        delete cellToRemove->cellPlayer;
+        delete[] cellToRemove;
+    }
 }
 
 Player* CList::first() {
