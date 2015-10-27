@@ -41,7 +41,7 @@ public:
     }
     void insert(Player *p);
     Player* first();
-    void next();
+    Player* next();
     void remove();
 };
 

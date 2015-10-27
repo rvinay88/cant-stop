@@ -26,6 +26,14 @@ Player* CList::first() {
     }
 }
 
+Player* CList::next() {
+    if(head == NULL) {
+        return NULL;
+    }
+    Cell *nextCell = head->next;
+    return nextCell->cellPlayer;
+}
+
 void CList::insert(Player *p) {
     Cell *c = new Cell(p);  // Create a new cell
     // First run
