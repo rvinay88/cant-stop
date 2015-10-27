@@ -16,7 +16,7 @@ class CList {
 private:
     int counter;  // number of players in the list
     Cell *head;    // Head pointer
-    Player *current; // Point to the current player
+    Cell *current; // Point to the current player
     Player *plist[];
 public:
     CList() {
@@ -25,9 +25,11 @@ public:
     ~CList() {
         delete[] *plist;
     }
+    
     int count() {
         return counter;
     }
+    
     bool empty() {
         if(counter == 0) {
             return true;
@@ -37,22 +39,10 @@ public:
         }
             
     }
-    void insert(Player *p) {
-        // add player to list
-    }
-    
-    void first() {
-        // set head to first Cell
-        // return player in first cell
-    }
-    
-    void remove() {
-        // remove current player
-        // remove corresponding cell
-        // set current pointer to the next CELL if available
-        // if head is being removed
-        // head should be next
-    }
+    void insert(Player *p);
+    Player* first();
+    void next();
+    void remove();
 };
 
 #endif /* CList_hpp */

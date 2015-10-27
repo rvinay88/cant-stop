@@ -13,9 +13,9 @@
 class Cell {
 private:
     Player *cellPlayer;
-    Cell *link;
+    Cell *next;
     Cell(Player *cellPlayer, Cell *link = NULL) {
-        link = link;
+        next = link;
         cellPlayer = cellPlayer;
     }
     ~Cell() {
