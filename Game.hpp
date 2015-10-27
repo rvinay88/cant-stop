@@ -7,6 +7,8 @@
 //
 #include "tools.hpp"
 #include "Dice.hpp"
+#include "Player.hpp"
+#include "Board.hpp"
 
 class Game {
 private:
