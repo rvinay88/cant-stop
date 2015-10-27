@@ -14,17 +14,15 @@
 
 class CList {
 private:
-    int counter;  // number of players in the list
-    Cell *head;    // Head pointer
-    Cell *current; // Point to the current player
-    Player *plist[];
+    int counter;     // number of players in the list
+    Cell *head;      // Head pointer
+    Player *current; // Point to the current player
 public:
     CList() {
-        plist[0] = NULL;
+        counter = 0;
+        head = NULL;
     }
-    ~CList() {
-        delete[] *plist;
-    }
+    ~CList() {}
     
     int count() {
         return counter;

@@ -9,7 +9,8 @@
 #include "CList.hpp"
 
 void CList::remove() {
-    // remove current player
+//    current
+    delete[] current;       // remove current player
     // remove corresponding cell
     // set current pointer to the next CELL if available
     // if head is being removed
@@ -17,12 +18,12 @@ void CList::remove() {
 }
 
 Player* CList::first() {
-    current = head;                 // set current pointer to cell at head
+    current = head->cellPlayer;      // set current pointer to cell at head
     if(head == NULL) {
         return NULL;                // check for empty list
     }
     else {
-        return current->cellPlayer;     // return pointer to player in first cell
+        return current;     // return pointer to player in first cell
     }
 }
 
@@ -30,15 +31,15 @@ Player* CList::next() {
     if(head == NULL) {
         return NULL;
     }
-    Cell *nextCell = head->next;
-    return nextCell->cellPlayer;
+    Cell *nextCell = head->next; // Find where next points to
+    return nextCell->cellPlayer; // Return the player pointer stored in that cell
 }
 
 void CList::insert(Player *p) {
     Cell *c = new Cell(p);  // Create a new cell
-    // First run
+    // if first run
     if (counter == 0) {
-        c->next = c; // The first one will point to itself
+        c->next = c; // The next on the first Cell will point to itself
     }
     else {
         c->next = head->next; // The new cell's next will point to the next item in the list
