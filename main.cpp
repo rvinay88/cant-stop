@@ -93,6 +93,7 @@ void unitStop() {
     cout << "\n----------Testing stop()-------\n";
     
     Column newC15(3);
+    cout << "\n State returns: \n" << newC15.state();
     
     Player newP15("Stan", GREEN);
     cout <<"\n Name: " << newP15.name() << "\n";

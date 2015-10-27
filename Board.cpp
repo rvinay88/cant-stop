@@ -16,3 +16,34 @@ ostream& Board::print( ostream& out ) {
     }
     return out;
 }
+
+void Board::startTurn(Player *player) {
+    currentPlayer = player;
+    counter = 0;
+}
+
+bool move(int column) {
+    if(true) {
+//    if( backBone[column]->state() == 'CAPTURED' || backBone[column]->state() == 'PENDING' ) {
+        return false;
+    }
+    else {
+  //      backBone[column]->markerArray[index]
+//        index = index of player->color()
+        return true;
+    }
+}
+
+void stop() {
+    // replace all towers
+    // by tiles of the right colors
+    // use tower array to decide which column needs to be stopped
+    // delegate action to column::stop()
+}
+
+void bust() {
+    // for this player
+    // how many towers
+    // are bust
+    // call column::bust()
+}

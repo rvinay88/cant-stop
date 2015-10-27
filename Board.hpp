@@ -16,8 +16,9 @@
 class Board {
 private:
     int counter; // how many towers
+    int towerCount[3] = {0,0,0};
     Column* backBone[13];
-    Player *player;
+    Player *currentPlayer;
 public:
     Board() {
         for(int k=0; k<13; ++k) {
@@ -29,7 +30,11 @@ public:
             }
         }
     }
+    bool move(int column);
     ostream& print( ostream& sout );
+    void startTurn(Player *player);
+    void stop();
+    void bust();
 };
 
 #endif /* Board_hpp */
