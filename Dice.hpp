@@ -1,5 +1,5 @@
 //
-//  Dice.hpp
+//  Dice.hpp base class
 //  cant-stop
 //
 //  Created by Vinay  Raghu on 10/17/15.
@@ -13,10 +13,12 @@
 class Dice {
 private:
     int nDice;
+    int numOfDice;
     int *diceArray;
 public:
-    Dice(int n = 1) {
+    Dice(int n = 1, int n2 = 1) {
         nDice = n;
+        numOfDice = n2; // number of dice
         diceArray = new int [ nDice ];
         srand ( (unsigned)time( NULL ) );
         cout << "\nConstruction complete \n";
