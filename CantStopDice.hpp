@@ -9,6 +9,15 @@
 #ifndef CantStopDice_hpp
 #define CantStopDice_hpp
 
-#include <stdio.h>
+#include "Dice.hpp"
+
+class CantStopDice : public Dice {
+public:
+    CantStopDice() : Dice(4, 6) {}
+    const int* roll() {
+        const int* rolledDice = Dice::roll();
+        return rolledDice;
+    }
+};
 
 #endif /* CantStopDice_hpp */
