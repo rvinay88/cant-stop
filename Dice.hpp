@@ -7,11 +7,12 @@
 //
 
 #pragma once
+#define infile.txt
 #include "tools.hpp"
 #include <ctime>
 
 class Dice {
-private:
+protected:
     int nDice;
     int numOfDice;
     int *diceArray;
