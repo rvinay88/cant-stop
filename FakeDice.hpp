@@ -24,7 +24,7 @@ public:
     }
     const int* roll() {
         for(int k=0; k<Dice::nDice; k++) {
-            while(std::getline(myFile, line)) {
+            while(!myFile.eof()) {
                 myFile >> diceArray[k];
             }
         }
